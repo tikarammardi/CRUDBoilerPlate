@@ -62,6 +62,11 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.get('*',(req,res,next)=> {
+    res.locals.user = req.user || null; //creating global variable
+    next();
+})
+
 //define routes
 app.use('/',routes);
 app.use('/users',users);

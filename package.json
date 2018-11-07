@@ -11,10 +11,7 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
-<<<<<<< HEAD
     "bootstrap": "^3.3.7",
-=======
->>>>>>> 57973494ac075cddc27d8269fdb24f8b356055b4
     "connect-flash": "^0.1.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
