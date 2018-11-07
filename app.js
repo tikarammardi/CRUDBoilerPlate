@@ -20,6 +20,7 @@ app.set('view engine', 'ejs');
 
 //set Static Folder
 app.use(express.static(path.join(__dirname,'public')));
+app.use('/css',express.static(__dirname +'/node_modules/bootstrap/dist/css'));
 
 // BodyParser
 app.use(bodyParser.json());
@@ -65,6 +66,7 @@ app.use(function (req, res, next) {
 app.use('/',routes);
 app.use('/users',users);
 
-app.listen(3000,()=>{
-    console.log(`sever started at port 3000`);
+let port  = process.env.PORT || 3000;
+app.listen(port,()=>{
+    console.log(`Server Running at port ${port}`);
 })
